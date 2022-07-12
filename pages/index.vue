@@ -2,7 +2,9 @@
   <v-app>
     <v-main class="d-flex align-center">
       <v-container class="d-flex justify-center">
-        <div>
+        <div
+          class="d-flex justify-center"
+        >
           <v-card
             class="d-flex justify-center rounded-xl cartao"
             elevation="3"
@@ -12,7 +14,7 @@
             <v-col>
               <v-row class="d-flex justify-center">
                 <v-img
-                  class="ma-5"
+                  class="ma-5 mt-2"
                   max-height="20%"
                   max-width="20%"
                   src="https://usefintech.com/wp-content/uploads/2020/09/sample-logo-600x600.png"
@@ -33,6 +35,7 @@
               </v-row>
               <v-action-button class="d-flex justify-center">
                 <v-btn
+                  to="/conta"
                   class="rounded-xl"
                   :loading="loading"
                   :disabled="loading"
@@ -85,7 +88,5 @@ export default {
 
 .botao {
   background-color: #ffc107;
-}
-.cartao {
 }
 </style>
