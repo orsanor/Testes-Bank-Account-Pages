@@ -1,85 +1,71 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-spacer></v-spacer>
-      <v-col cols="8">
-        <!--Formulario-->
-        <v-card height="550" rounded="false">
-          <v-card-text>
-            <v-form v-model="valid">
-              <v-row>
-                <v-spacer></v-spacer>
-                <v-col cols="8" class="logo">
-                  <v-img
-                    height="100%"
-                    width="50%"
-                    src="https://blog.bancoafro.com.br/wp-content/themes/blogbancoafro/img/logo/logo.png"
-                  >
-                  </v-img>
-                </v-col>
-                <v-spacer></v-spacer>
+  <v-app>
+    <v-main class="d-flex align-center">
+      <v-container class="d-flex justify-center">
+        <div>
+          <v-card
+            class="d-flex justify-center rounded-xl"
+            height="auto"
+            width="500px"
+          >
+            <v-col>
+              <v-row class="d-flex justify-center">
+                <v-img
+                  class="ma-5"
+                  max-height="20%"
+                  max-width="20%"
+                  src="https://usefintech.com/wp-content/uploads/2020/09/sample-logo-600x600.png"
+                >
+                </v-img>
               </v-row>
-
-              <!--textfields-->
               <v-row>
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    outlined
-                    v-model="nome"
-                    :rules="nomeRules"
-                    placeholder="Nome"
-                    filled
-                    required
-                  ></v-text-field>
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    outlined
-                    v-model="sobrenome"
-                    :rules="sobrenomeRules"
-                    placeholder="Sobrenome"
-                    filled
-                    required
-                  ></v-text-field>
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    outlined
-                    v-model="email"
-                    :rules="emailRules"
-                    placeholder="E-mail"
-                    filled
-                    required
-                  ></v-text-field>
-                </v-col>
+                <v-text-field class="ml-15 mr-15" outlined label="Login">
+                </v-text-field>
               </v-row>
-            </v-form>
-          </v-card-text>
-        </v-card>
-      </v-col>
-      <v-spacer></v-spacer>
-    </v-row>
-  </v-container>
+              <v-row>
+                <v-text-field class="ml-15 mr-15 mb-3" outlined label="Senha">
+                </v-text-field>
+              </v-row>
+              <v-action-button class="d-flex justify-center">
+                <v-btn
+                  :loading="loading"
+                  :disabled="loading"
+                  @click="loader = 'loading'"
+                >
+                  entrar
+                  <v-icon class="ml-2 amber accent-3 rounded-xl">
+                    mdi-arrow-right-bold
+                  </v-icon>
+                </v-btn>
+              </v-action-button>
+            </v-col>
+          </v-card>
+        </div>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    valid: false,
-    nomeRules: [(v) => !!v || "Por favor colocar o Nome"],
-    nome: "",
-    sobrenome: "",
-    sobrenomeRules: [(v) => !!v || "Por favor colocar o Sobrenome"],
-    email: "",
-    emailRules: [(v) => !!v || "Por favor colocar um E-mail valido"],
-  }),
+  data() {
+    return {
+      loader: null,
+      loading: false,
+    };
+  },
+  watch: {
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
+
+      setTimeout(() => (this[l] = false), 2000);
+
+      this.loader = null;
+    },
+  },
 };
 </script>
 
 <style scoped>
-.logo {
-  padding-left: 22%;
-}
 </style>
