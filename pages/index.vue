@@ -4,9 +4,10 @@
       <v-container class="d-flex justify-center">
         <div>
           <v-card
-            class="d-flex justify-center rounded-xl"
+            class="d-flex justify-center rounded-xl cartao"
+            elevation="3"
             height="auto"
-            width="500px"
+            width="82%"
           >
             <v-col>
               <v-row class="d-flex justify-center">
@@ -19,21 +20,26 @@
                 </v-img>
               </v-row>
               <v-row>
-                <v-text-field class="ml-15 mr-15" outlined label="Login">
+                <v-text-field class="ml-15 mr-15 login" outlined label="Login">
                 </v-text-field>
               </v-row>
               <v-row>
-                <v-text-field class="ml-15 mr-15 mb-3" outlined label="Senha">
+                <v-text-field
+                  class="ml-15 mr-15 mb-3 senha"
+                  outlined
+                  label="Senha"
+                >
                 </v-text-field>
               </v-row>
               <v-action-button class="d-flex justify-center">
                 <v-btn
+                  class="rounded-xl"
                   :loading="loading"
                   :disabled="loading"
                   @click="loader = 'loading'"
                 >
-                  entrar
-                  <v-icon class="ml-2 amber accent-3 rounded-xl">
+                  Entrar
+                  <v-icon class="ml-2 rounded-xl botao">
                     mdi-arrow-right-bold
                   </v-icon>
                 </v-btn>
@@ -68,4 +74,18 @@ export default {
 </script>
 
 <style scoped>
+.senha {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.login {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.botao {
+  background-color: #ffc107;
+}
+.cartao {
+}
 </style>
