@@ -1,54 +1,36 @@
 <template>
   <v-app>
-    <v-main class="d-flex align-center">
-      <v-container class="d-flex justify-center">
-        <div>
-          <v-card class="d-flex justify-center rounded-xl" height="auto" width="500px">
-            <v-col>
-              <v-row class="d-flex justify-center">
-                <v-img
-                  class="ma-5"
-                  max-height="20%"
-                  max-width="20%"
-                  src
+    <v-main>
+      <div>
+        <v-col>
+          <v-row>
+            <v-card class="d-flex card" elevation="0" height="100%" width="100%">
+              <v-img
+                class="ma-5 mt-2"
+                max-height="9%"
+                max-width="9%"
+                src="https://blog.bancoafro.com.br/wp-content/themes/blogbancoafro/img/logo/logo.png"
+              >
+              </v-img>
+              <v-action-button class="d-flex">
+                <v-btn 
+                class="rounded-xl ml-" 
+                to="/index"
                 >
-                </v-img>
-              </v-row>
-              <v-row>
-                <v-text-field 
-                  class="ml-15 mr-15 " 
-                  outlined
-                  label="Login"
-                > 
-                </v-text-field>
-              </v-row>
-              <v-row>
-                <v-text-field 
-                  class="ml-15 mr-15 mb-3" 
-                  outlined
-                  label="Senha"
-                > 
-                </v-text-field>
-              </v-row>
-              <v-action-button class="d-flex justify-center">
-                <v-btn
-                
-              
-                >
-                    entrar
-                    <v-icon
-                      class="ml-2 amber accent-3 rounded-xl"
-                    >
-                      
-                      mdi-arrow-right-bold
-                    </v-icon>
+                  Sair
+                  <v-icon class="ml-1 rounded-xl botao"> mdi-close </v-icon>
                 </v-btn>
               </v-action-button>
-            </v-col>
-          </v-card>
-        </div>
-      </v-container>
+            </v-card>
+          </v-row>
+        </v-col>
+        <v-col>
+          <v-row class="d-flex justify-center">
+             Seja Bem-vindo ao Banco Afro
+          </v-row>
+        </v-col>
+        
+      </div>
     </v-main>
   </v-app>
 </template>
-

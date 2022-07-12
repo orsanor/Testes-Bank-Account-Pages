@@ -2,9 +2,7 @@
   <v-app>
     <v-main class="d-flex align-center">
       <v-container class="d-flex justify-center">
-        <div
-          class="d-flex justify-center"
-        >
+        <div class="d-flex justify-center">
           <v-card
             class="d-flex justify-center rounded-xl cartao"
             elevation="3"
@@ -35,11 +33,12 @@
               </v-row>
               <v-action-button class="d-flex justify-center">
                 <v-btn
-                  to="/conta"
+                  
                   class="rounded-xl"
                   :loading="loading"
                   :disabled="loading"
                   @click="loader = 'loading'"
+                  to="/conta"
                 >
                   Entrar
                   <v-icon class="ml-2 rounded-xl botao">
