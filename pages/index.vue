@@ -33,12 +33,11 @@
               </v-row>
               <v-action-button class="d-flex justify-center">
                 <v-btn
-                  
                   class="rounded-xl"
                   :loading="loading"
                   :disabled="loading"
-                  @click="loader = 'loading'"
-                  to="/conta"
+                  @click="login()"
+                  
                 >
                   Entrar
                   <v-icon class="ml-2 rounded-xl botao">
@@ -61,6 +60,12 @@ export default {
       loader: null,
       loading: false,
     };
+  },
+  methods: {
+    async login() {
+      this.loader = "loading";
+      this.$router.push('/conta');
+    },
   },
   watch: {
     loader() {
