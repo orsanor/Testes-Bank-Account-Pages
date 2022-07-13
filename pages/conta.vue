@@ -55,14 +55,14 @@
                           d-flex
                           rounded-xl
                           mt-10
-                          ml-6
+                          ml-4
                           justify-center
                           bottom
                         "
                         outlined
                         elevation="1"
                         height="110px"
-                        width="420px"
+                        width="350px"
                       >
                         <v-icon x-large color="#ffc107"> mdi-qrcode </v-icon>
                       </v-btn>
