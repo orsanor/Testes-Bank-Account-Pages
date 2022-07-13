@@ -37,7 +37,6 @@
                   :loading="loading"
                   :disabled="loading"
                   @click="login()"
-                  
                 >
                   Entrar
                   <v-icon class="ml-2 rounded-xl botao">
@@ -64,7 +63,7 @@ export default {
   methods: {
     async login() {
       this.loader = "loading";
-      this.$router.push('/conta');
+      this.$router.push("/conta");
     },
   },
   watch: {
