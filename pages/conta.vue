@@ -83,12 +83,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.bottom {
-}
-
-.card {
-  background-color: ;
-}
 .page {
   background-color: #f2f2f2;
 }
