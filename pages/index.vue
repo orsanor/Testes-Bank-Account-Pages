@@ -32,12 +32,7 @@
                 </v-text-field>
               </v-row>
               <v-card-actions class="d-flex justify-center">
-                <v-btn
-                  class="rounded-xl"
-                  :loading="loading"
-                  :disabled="loading"
-                  @click="login()"
-                >
+                <v-btn class="rounded-xl" @click="login()">
                   Entrar
                   <v-icon class="ml-2 rounded-xl botao">
                     mdi-arrow-right-bold
@@ -55,25 +50,11 @@
 <script>
 export default {
   data() {
-    return {
-      loader: null,
-      loading: false,
-    };
+    return {};
   },
   methods: {
     async login() {
-      this.loader = "loading";
       this.$router.push("/conta");
-    },
-  },
-  watch: {
-    loader() {
-      const l = this.loader;
-      this[l] = !this[l];
-
-      setTimeout(() => (this[l] = false), 2000);
-
-      this.loader = null;
     },
   },
 };
