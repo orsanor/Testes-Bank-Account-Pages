@@ -15,7 +15,7 @@
             </v-col>
             <v-col cols="6" class="justify-center">
               <v-btn
-                class="rounded-xl mt-5 float-right mr-3 pa-1"
+                class="rounded-xl mt-6 float-right mr-3 pa-4"
                 elavation="1"
                 to="/"
               >
