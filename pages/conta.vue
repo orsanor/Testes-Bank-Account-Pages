@@ -22,13 +22,18 @@
 
         <v-col>
           <v-row class="d-flex justify-center">
-            <div class="h5 font-weight-bold gray--text"
-            >
-            Seja Bem-vindo ao Banco Afro
+            <div class="h5 font-weight-bold gray--text">
+              Seja Bem-vindo ao Banco Afro
             </div>
           </v-row>
         </v-col>
       </div>
+      <v-row>
+        <v-col cols="6">
+          <v-card elevation="3" class="mx-auto my-12" max-width="374"> </v-card>
+          <v-card-text> Conta </v-card-text>
+        </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>
