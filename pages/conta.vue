@@ -15,7 +15,7 @@
               <v-action-button class="d-flex">
                 <v-btn 
                 class="rounded-xl ml-" 
-                to="/index"
+                to="/"
                 >
                   Sair
                   <v-icon class="ml-1 rounded-xl botao"> mdi-close </v-icon>
