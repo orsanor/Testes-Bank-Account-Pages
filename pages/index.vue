@@ -31,7 +31,7 @@
                 >
                 </v-text-field>
               </v-row>
-              <v-action-button class="d-flex justify-center">
+              <v-card-actions class="d-flex justify-center">
                 <v-btn
                   class="rounded-xl"
                   :loading="loading"
@@ -43,7 +43,7 @@
                     mdi-arrow-right-bold
                   </v-icon>
                 </v-btn>
-              </v-action-button>
+              </v-card-actions>
             </v-col>
           </v-card>
         </div>
